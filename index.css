@@ -1,0 +1,48 @@
+.animation{
+    animation: flash 3s 1 linear ;
+}
+/* #yes{
+    margin: 20px;
+} */
+#yes, #no{
+    padding: 5px ;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.box, .box1{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    transition:transform 0.001s ;
+    -webkit-transition:transform 0.001s ;
+    -moz-transition:transform 0.001s ;
+    -ms-transition:transform 0.001s ;
+    -o-transition:transform 0.001s ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.show{
+    
+    display: block !important;
+}
+@keyframes flash {
+    50%{
+        
+        opacity: 1;
+    }
+}
+/* .box:hover{
+    transform: translate(100px);
+    -webkit-transform: translate(100px);
+    -moz-transform: translate(100px);
+    -ms-transform: translate(100px);
+    -o-transform: translate(100px);
+    transition:transform 1s ;
+    -webkit-transition:transform 1s ;
+    -moz-transition:transform 1s ;
+    -ms-transition:transform 1s ;
+    -o-transition:transform 1s ;
+} */
