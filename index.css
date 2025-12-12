@@ -103,18 +103,18 @@ body {
     background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
     border: none;
     border-radius: 50px;
-    padding: 20px 45px;
-    font-size: 16px;
+    padding: 12px 25px;
+    font-size: 13px;
     font-weight: 600;
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
     letter-spacing: 1px;
-    box-shadow: 0 8px 25px rgba(238, 90, 90, 0.4);
+    box-shadow: 0 6px 20px rgba(238, 90, 90, 0.4);
     white-space: nowrap;
     position: relative;
     overflow: hidden;
-    min-width: 200px;
+    min-width: auto;
     text-align: center;
 }
 
@@ -260,4 +260,111 @@ body {
 
 .popup-btn:active {
     transform: translateY(-1px);
+}
+
+/* Responsive cho mobile */
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding: 40px 20px;
+        margin: 15px;
+        border-radius: 20px;
+    }
+
+    .subtitle {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 30px;
+        line-height: 1.4;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #yes {
+        padding: 16px 35px;
+        font-size: 14px;
+        min-width: 180px;
+    }
+
+    #no {
+        padding: 10px 20px;
+        font-size: 11px;
+        min-width: auto;
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    /* Popup mobile */
+    .popup-content {
+        padding: 30px 25px;
+        margin: 15px;
+        max-width: 90%;
+        border-radius: 20px;
+    }
+
+    .popup-icon {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    .popup-title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .popup-message {
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .popup-btn {
+        padding: 12px 35px;
+        font-size: 15px;
+    }
+}
+
+/* Responsive cho màn hình rất nhỏ */
+@media screen and (max-width: 480px) {
+    .wrapper {
+        padding: 30px 15px;
+        margin: 10px;
+    }
+
+    .title {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    #yes {
+        padding: 14px 30px;
+        font-size: 13px;
+        min-width: 160px;
+    }
+
+    #no {
+        padding: 8px 18px;
+        font-size: 10px;
+        min-width: auto;
+    }
+
+    .popup-content {
+        padding: 25px 20px;
+    }
+
+    .popup-title {
+        font-size: 20px;
+    }
+
+    .popup-message {
+        font-size: 13px;
+    }
 }
