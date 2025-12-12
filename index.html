@@ -93,8 +93,7 @@
                 $(this).removeClass('show');
             }
         })
-
-        $('.box').mouseover(function(){
+        function randomPosition() {
             // Lấy vị trí và kích thước của wrapper
             let wrapper = $('.wrapper');
             let wrapperOffset = wrapper.offset();
@@ -102,20 +101,27 @@
             let wrapperHeight = wrapper.outerHeight();
             
             // Kích thước của nút
-            let boxWidth = $(this).outerWidth();
-            let boxHeight = $(this).outerHeight();
+            let box = $('.box');
+            let boxWidth = box.outerWidth();
+            let boxHeight = box.outerHeight();
             
             // Tạo vị trí ngẫu nhiên trong wrapper
             let randomX = wrapperOffset.left + Math.floor(Math.random() * (wrapperWidth - boxWidth));
             let randomY = wrapperOffset.top + Math.floor(Math.random() * (wrapperHeight - boxHeight));
             
             // Di chuyển nút đến vị trí ngẫu nhiên trong wrapper
-            $(".box").css({
+            box.css({
                 "position": "fixed",
                 "left": randomX + "px",
                 "top": randomY + "px",
                 "transform": "none"
             });
+        }
+         $('#no').click(function(){
+            randomPosition();
+         });
+        $('.box').mouseover(function(){
+            randomPosition();
         });
     </script>
 </body>
